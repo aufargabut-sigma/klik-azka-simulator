@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klik Azka Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <header>
+            <h1>Klik Azka Simulator</h1>
+            <p>Klik azka untuk naik level hingga 1000!</p>
+        </header>
+        
+        <div id="main-game">
+            <div id="clickable-area">
+                <img id="clickable-image" src="foto azka.png" alt="Klik Saya">
+                <div id="click-effects"></div>
+            </div>
+            <div id="stats">
+                <p id="level-display">Level Saat Ini: 1</p>
+                <p id="xp-display">XP: 0 / 10</p>
+                <div id="xp-bar">
+                    <div id="xp-fill"></div>
+                </div>
+                <p id="coins-display">Koin: 0</p>
+            </div>
+        </div>
+        
+        <div id="buttons">
+            <button id="shop-btn"> Toko🛒</button>
+            <button id="settings-btn">Pengaturan⚙️</button>
+            <button id="achievements-btn"> Pencapaian🎉</button>
+            
+        </div>
+        
+        <!-- Modals -->
+        <div id="shop-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Toko Item</h2>
+                <div id="shop-items">
+                    <!-- Items will be populated by JS -->
+                </div>
+            </div>
+        </div>
+        
+        <div id="settings-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Pengaturan</h2>
+                <label><input type="checkbox" id="sound-toggle"> Suara Aktif</label>
+                <button id="export-save">Ekspor Data Simpanan</button>
+                <button id="import-save">Impor Data Simpanan</button>
+                <input type="file" id="import-file" accept=".json" style="display: none;">
+                <button id="reset-game">Reset Permainan</button>
+            </div>
+        </div>
+          <footer>
+    <P>&copy;2025 aufar|klik azka Simulator</P>
+   </footer>
+        
+        <div id="achievements-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Pencapaian</h2>
+                <ul id="achievements-list">
+                    <!-- Achievements will be populated by JS -->
+                </ul>
+            </div>
+        </div>
+        
+        <div id="level-up-popup" class="popup">
+            <p>Kamu Naik Level!</p>
+        </div>
+        
+        <div id="prestige-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Prestise</h2>
+                <p>Anda telah mencapai Level 1000! Prestise untuk pengganda 2x XP dan Koin.</p>
+                <button id="prestige-btn">Prestise Sekarang</button>
+            </div>
+        </div>
+    </div>
+    
+    <audio id="click-sound" src="dry-fart.mp3"></audio>
+    <audio id="levelup-sound" src="winners_W9Cpenj.mp3"></audio>
+    <audio id="purchase-sound" src="kaching-sound-fx.mp3"></audio>
+    <audio id="achievement-sound" src="winners_W9Cpenj.mp3"></audio>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
